@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Aulas</title>
+    <style>
+        /* .container necessário para estabelecer os grids. */
+       .container{
+        display: grid;
+       }
+       /* formatação do que vai aparecer na tela*/
+       body {
+            background-image: url(Imagens/cavaleiro01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: auto;
+        }
+        /* formatação do topo da página*/
+       header{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #09baf0;
+            text-align: center;
+            
+       } 
+       /*inserção do menu  junto com a formatação*/
+       .menu{
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;
+            background-color: azure;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }
+       
+        a:link {
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid #09baf0 1px;
+            color: #09baf0;
+    
+        }
+        /* mudança no cor do link do menu quando visitado */
+        a:visited{
+            color: red;
+        }
+        /*mudança da cor do menu quando mouse está em cima */
+        a:hover {
+            background-color: #09baf0;
+            color: azure;
+            text-decoration: underline;
+        }
+       /* lista para o menu */
+       .menu ul {
+            list-style-type: none;
+            color: azure;
+            justify-content: center;
+            text-align: left;
+            align-content: center;
+       }
+       /* lista da esquerda para a direita */
+       .menu li {
+            float: left;
+            justify-content: center;
+        }
+        /* formatação do texto */
+      .texto{
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: justify;
+            color: #09baf0;
+            background-color: azure;
+      }
+       
+       .imagem{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            justify-content: center;
+       }
+       /* formatação do rodapé */
+       footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: #09baf0;
+            color: azure;
+            text-align: center;
+        }
+       /* adaptação para diferentes tipos de tela */
+       @media only screen and (max-width: 767px) {
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .menu ul {
+                padding: 0;
+            }
+
+            a:link {
+            padding: 10px 3px;
+            }
+            .imagem {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .texto {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1 style="color: azure;font-style: italic; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">Portfólio</h1>
+    </header>
+    
+    <Nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="formacao.html">Formação</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </Nav>
+    <br>
+    <div class="container wrapper">
+
+    <aside class="imagem wrapper">
+        <img src="Imagens/portfolio.jpg" alt="imagem de uma caixa com post-it" max width="376px">
+    </aside>
+
+    <section class="texto">
+        <h1>Repositório Github UNINTER</h1>
+        <h3>Clique na imagem do github:</h3>
+        <a href="https://github.com/RealGuin/Uninter_GuilhermePereira" style="text-decoration: none; background-color: azure; color: azure;">
+        <img src="Imagens/github.png" alt="logo do github">
+        </a>
+    </section>
+    <br>
+    </div>
+
+    <footer class="container">
+        <h3>
+            <br>
+            <br>
+            "Às vezes, a vida vai te acertar um tijolo na cabeça. Não perca a fé."
+            <br>
+            <br>
+            Steve Jobs
+        </h3>
+    </footer>
+</body>
+</html>
